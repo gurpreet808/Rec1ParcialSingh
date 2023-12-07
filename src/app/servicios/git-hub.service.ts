@@ -8,7 +8,7 @@ import { GitHubUserData } from '../clases/git-hub-user-data';
 })
 export class GitHubService {
 
-  url_server: string = "https://api.github.com/users/";
+  url_server: string = "https://api.github.com/";
 
   constructor(public _http: HttpClient) { }
 

@@ -10,6 +10,6 @@ import { GitHubService } from './servicios/git-hub.service';
 export class AppComponent {
   title = 'Rec1ParcialSingh';
 
-  constructor(public servAuth: AuthService) {
+  constructor() {
   }
 }

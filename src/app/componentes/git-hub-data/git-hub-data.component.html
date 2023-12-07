@@ -1,0 +1,60 @@
+<div id="githubuser_container" *ngIf="github_data">
+    <div id="user_info">
+        <img id="user_avatar" [src]="github_data.avatar_url" alt="Avatar">
+
+        <div id="user_name_container" name="profile_data" name="profile_data">
+            <label for="user_name">Usuario:</label>
+            <div id="user_name" *ngIf="github_data.name">{{ github_data.name }}</div>
+        </div>
+        <div id="user_company_container" name="profile_data" *ngIf="github_data.company">
+            <label for="user_company">Compañía:</label>
+            <div id="user_company">{{ github_data.company }}</div>
+        </div>
+        <div id="user_blog_container" name="profile_data" *ngIf="github_data.blog">
+            <label for="user_blog">Blog:</label>
+            <div id="user_blog">{{ github_data.blog }}</div>
+        </div>
+        <div id="user_location_container" name="profile_data" *ngIf="github_data.location">
+            <label for="user_location">Ubicación:</label>
+            <div id="user_location">{{ github_data.location }}</div>
+        </div>
+        <div id="user_email_container" name="profile_data" *ngIf="github_data.email">
+            <label for="user_email">Email:</label>
+            <div id="user_email">{{ github_data.email }}</div>
+        </div>
+        <div id="user_hireable_container" name="profile_data" *ngIf="github_data.hireable">
+            <label for="user_hireable">Disponible para contratar:</label>
+            <div id="user_hireable">{{ github_data.hireable }}</div>
+        </div>
+        <div id="user_bio_container" name="profile_data" *ngIf="github_data.bio">
+            <label for="user_bio">Biografía:</label>
+            <div id="user_bio">{{ github_data.bio }}</div>
+        </div>
+        <div id="user_twitter_container" name="profile_data" *ngIf="github_data.twitter_username">
+            <label for="user_twitter">Twitter:</label>
+            <div id="user_twitter">{{ github_data.twitter_username }}</div>
+        </div>
+    </div>
+
+    <div id="user_links">
+        <p id="user_repos">
+            <strong>Repositorios:</strong> {{ github_data.public_repos }}
+        </p>
+        <p id="user_gists" *ngIf="github_data.public_gists">
+            <strong>Gists públicos:</strong> {{ github_data.public_gists }}
+        </p>
+        <p id="user_followers">
+            <strong>Seguidores:</strong> {{ github_data.followers }}
+        </p>
+        <p id="user_following">
+            <strong>Siguiendo:</strong> {{ github_data.following }}
+        </p>
+        <p id="user_created_at">
+            <strong>Inició en:</strong> {{ github_data.created_at | date: 'dd/MM/yyyy' }}
+        </p>
+    </div>
+</div>
+
+<div id="loading_message" *ngIf="!github_data">
+    Cargando datos de GitHub...
+</div>

@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "Rec1ParcialSingh",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

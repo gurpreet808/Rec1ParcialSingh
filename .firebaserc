@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "singh-primerparciallab4": {
+      "hosting": {
+        "Rec1ParcialSingh": [
+          "singh-primerparciallab4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "singh-primerparciallab4"
+  }
+}
